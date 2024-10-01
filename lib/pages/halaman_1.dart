@@ -12,7 +12,7 @@ class HalamanSatu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var test = "".obs;
+    var page_1 = "".obs;
 
     return Scaffold(
         appBar: AppBar(
@@ -25,18 +25,20 @@ class HalamanSatu extends StatelessWidget {
             children: [
               ElevatedButton(
                 onPressed: () async {
-                  test.value = await Get.to(HalamanDua(),
+                  page_1.value = await Get.to(HalamanDua(),
                       arguments: "Selaamat Andaa Masuk ke Tahap Dua!");
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.orange,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
-                child: Text("Mulai Petualangan Seru"),
+                child: Text(
+                  "Mulai Petualangan Seru",
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
-              Obx(() => Text(test.value)),
+              Obx(() => Text(page_1.value)),
             ],
           ),
         ));

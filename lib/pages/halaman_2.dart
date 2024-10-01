@@ -2,6 +2,7 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/pages/halaman_1.dart';
 import 'package:myapp/pages/halaman_3.dart';
 
@@ -13,8 +14,16 @@ class HalamanDua extends StatefulWidget {
 }
 
 class _HalamanDuaState extends State<HalamanDua> {
+  var page_2 = "".obs;
+
   @override
   Widget build(BuildContext context) {
+    Future.delayed(Duration(milliseconds: 100), () {
+      Get.snackbar(
+        "Selamat Datang",
+        "Anda Berhasil Ke Tahap 2",
+      );
+    });
     return Scaffold(
       appBar: AppBar(
         title: const Text("Halaman Dua"),
@@ -55,47 +64,106 @@ class _HalamanDuaState extends State<HalamanDua> {
                 );
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.orange,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
-              child: Text('Kembali'),
+              child: Text(
+                'Kembali',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
             SizedBox(
               height: 20,
             ),
             ElevatedButton(
               onPressed: () {
-                Get.snackbar(
-                  "ini Notifikasi",
-                  "Anda Memeiliki 10 Pemeberitahun",
-                );
+                Get.bottomSheet(Container(
+                  color: Colors.white,
+                  child: Wrap(
+                    children: [
+                      ListTile(
+                        leading: Icon(Icons.light_mode_outlined),
+                        title: Text("Light Mode"),
+                        onTap: () {
+                          Get.changeTheme(
+                            ThemeData(
+                              brightness: Brightness.light,
+                              colorScheme: ColorScheme.fromSeed(
+                                  seedColor: Colors.deepPurple,
+                                  brightness: Brightness.light),
+                              textTheme: GoogleFonts.outfitTextTheme().apply(
+                                bodyColor: Colors.black,
+                                displayColor: Colors.black,
+                              ),
+                              elevatedButtonTheme: ElevatedButtonThemeData(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.orange,
+                                ),
+                              ),
+                              floatingActionButtonTheme:
+                                  FloatingActionButtonThemeData(
+                                backgroundColor: Colors.orange,
+                              ),
+                            ),
+                          );
+                          Get.back();
+                        },
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.dark_mode),
+                        title: Text("Dark Mode"),
+                        onTap: () {
+                          Get.changeTheme(
+                            ThemeData(
+                              brightness: Brightness.dark,
+                              colorScheme: ColorScheme.fromSeed(
+                                  seedColor: Colors.deepPurple,
+                                  brightness: Brightness.dark),
+                              textTheme: GoogleFonts.outfitTextTheme().apply(
+                                bodyColor: Colors.white,
+                                displayColor: Colors.white,
+                              ),
+                              elevatedButtonTheme: ElevatedButtonThemeData(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.blueGrey,
+                                ),
+                              ),
+                              floatingActionButtonTheme:
+                                  FloatingActionButtonThemeData(
+                                backgroundColor: Colors.blueGrey,
+                              ),
+                            ),
+                          );
+                          Get.back();
+                        },
+                      ),
+                    ],
+                  ),
+                ));
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.orange,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
-              child: Text("Show Notification"),
+              child: Text(
+                "Show Notification",
+                style: TextStyle(color: Colors.white),
+              ),
             ),
-            Text(Get.arguments),
+            Obx(() => Text(page_2.value)),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Get.to(HalamanTiga());
-          Future.delayed(Duration(microseconds: 100), () {
-            Get.snackbar(
-              "Selamat Datang",
-              "Anda Berhasil Ke Tahap 3",
-            );
-          });
+        onPressed: () async {
+          page_2.value = await Get.to(HalamanTiga(), arguments: "");
         },
-        backgroundColor: Colors.orange,
-        child: Icon(Icons.arrow_forward),
+        child: Icon(
+          Icons.arrow_forward,
+          color: Colors.white,
+        ),
       ),
     );
   }

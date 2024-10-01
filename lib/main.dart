@@ -7,11 +7,11 @@ import 'package:myapp/pages/home.dart';
 import 'package:myapp/pages/new-form.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -19,12 +19,24 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+      themeMode: ThemeMode.system,
       theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-          textTheme: GoogleFonts.outfitTextTheme(Theme.of(context)
-              .textTheme
-              .apply(bodyColor: Colors.black, displayColor: Colors.black))),
+        brightness: Brightness.light,
+        colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.deepPurple, brightness: Brightness.light),
+        textTheme: GoogleFonts.outfitTextTheme().apply(
+          bodyColor: Colors.black,
+          displayColor: Colors.black,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.orange,
+          ),
+        ),
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: Colors.orange,
+        ),
+      ),
       home: const HalamanSatu(),
     );
   }
