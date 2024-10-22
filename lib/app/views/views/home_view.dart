@@ -231,6 +231,10 @@ class _HomePageState extends State<HomePage> {
                             onLongPress: () {
                               controller.deleteData(data[index].id);
                             },
+                            onTap: () {
+                              Get.toNamed('/update-receipt',
+                                  arguments: data[index].id);
+                            },
                             child: Container(
                               constraints: const BoxConstraints(
                                   minWidth: double.infinity),

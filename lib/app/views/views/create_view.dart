@@ -36,6 +36,7 @@ class CreateView extends GetView<CreateController> {
                     ),
                     labelText: "Nama Makanan",
                   ),
+                  textInputAction: TextInputAction.next,
                 ),
               ),
               Container(
@@ -52,6 +53,7 @@ class CreateView extends GetView<CreateController> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
+                  textInputAction: TextInputAction.next,
                 ),
               ),
               Container(
@@ -68,6 +70,7 @@ class CreateView extends GetView<CreateController> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
+                  textInputAction: TextInputAction.next,
                   maxLines: 3,
                 ),
               ),
@@ -85,6 +88,7 @@ class CreateView extends GetView<CreateController> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
+                  textInputAction: TextInputAction.next,
                   maxLines: 3,
                 ),
               ),
