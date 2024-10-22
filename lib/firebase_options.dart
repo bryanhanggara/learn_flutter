@@ -50,20 +50,21 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCU2y5VKvKlDbbgOsvnQcdjnLLBkw2Ya58',
-    appId: '1:425134419399:web:90b3b0cf65adb358e3bde2',
-    messagingSenderId: '425134419399',
-    projectId: 'healty-meal-4591f',
-    authDomain: 'healty-meal-4591f.firebaseapp.com',
-    storageBucket: 'healty-meal-4591f.appspot.com',
-    measurementId: 'G-DMRVH99H91',
+    apiKey: 'AIzaSyA25hMHffdcQNmytouBwo9JVvwU6JKYmoc',
+    appId: '1:233473959259:web:b156aa25e4561e2c88e67e',
+    messagingSenderId: '233473959259',
+    projectId: 'healt-meal',
+    authDomain: 'healt-meal.firebaseapp.com',
+    storageBucket: 'healt-meal.appspot.com',
+    measurementId: 'G-CV9XTPPWNY',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBNytWn-X6Pz7wCqsgvgsiu56f7297mYEg',
-    appId: '1:425134419399:android:e83f94711172919fe3bde2',
-    messagingSenderId: '425134419399',
-    projectId: 'healty-meal-4591f',
-    storageBucket: 'healty-meal-4591f.appspot.com',
+    apiKey: 'AIzaSyDkGuhNJ3qRBuJn_VejtUX3wBdTM9OjHpE',
+    appId: '1:233473959259:android:2882cf154ef60ac788e67e',
+    messagingSenderId: '233473959259',
+    projectId: 'healt-meal',
+    storageBucket: 'healt-meal.appspot.com',
   );
+
 }

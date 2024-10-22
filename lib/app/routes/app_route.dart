@@ -15,6 +15,7 @@ class AppRoute {
     GetPage(
       name: home,
       page: () => HomePage(),
+      binding: HomeBinding(),
     ),
     GetPage(
       name: createRecipt,

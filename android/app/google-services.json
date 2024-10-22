@@ -1,70 +1,13 @@
 {
   "project_info": {
-    "project_number": "425134419399",
-    "project_id": "healty-meal-4591f",
-    "storage_bucket": "healty-meal-4591f.appspot.com"
+    "project_number": "233473959259",
+    "project_id": "healt-meal",
+    "storage_bucket": "healt-meal.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:425134419399:android:0d5aa30318224edee3bde2",
-        "android_client_info": {
-          "package_name": "com.example.a"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBNytWn-X6Pz7wCqsgvgsiu56f7297mYEg"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:425134419399:android:585f136467e2b3ebe3bde2",
-        "android_client_info": {
-          "package_name": "com.example.app"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBNytWn-X6Pz7wCqsgvgsiu56f7297mYEg"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:425134419399:android:09f6f49f2f9756ace3bde2",
-        "android_client_info": {
-          "package_name": "com.lx.firebase_application"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBNytWn-X6Pz7wCqsgvgsiu56f7297mYEg"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:425134419399:android:e83f94711172919fe3bde2",
+        "mobilesdk_app_id": "1:233473959259:android:2882cf154ef60ac788e67e",
         "android_client_info": {
           "package_name": "com.myapp"
         }
@@ -72,7 +15,26 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBNytWn-X6Pz7wCqsgvgsiu56f7297mYEg"
+          "current_key": "AIzaSyDkGuhNJ3qRBuJn_VejtUX3wBdTM9OjHpE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233473959259:android:6ebe374b361468cd88e67e",
+        "android_client_info": {
+          "package_name": "healthmeal.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkGuhNJ3qRBuJn_VejtUX3wBdTM9OjHpE"
         }
       ],
       "services": {

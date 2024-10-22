@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:myapp/app/controllers/create_controller.dart';
 
 class CreateView extends GetView<CreateController> {
   const CreateView({super.key});
+
   @override
   Widget build(BuildContext context) {
     final CreateController controller = Get.find();
@@ -14,10 +14,15 @@ class CreateView extends GetView<CreateController> {
         title: const Text('Buat Resep'),
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          Expanded(
-            child: Container(
+      resizeToAvoidBottomInset: true,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.only(
+            bottom: MediaQuery.of(context).viewInsets.bottom,
+          ),
+          child: Column(
+            children: [
+              Container(
                 margin: EdgeInsets.all(10),
                 padding: EdgeInsets.all(5),
                 decoration: BoxDecoration(
@@ -26,14 +31,14 @@ class CreateView extends GetView<CreateController> {
                 child: TextField(
                   controller: controller.titleController,
                   decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      labelText: "Nama Makanan"),
-                )),
-          ),
-          Expanded(
-            child: Container(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    labelText: "Nama Makanan",
+                  ),
+                ),
+              ),
+              Container(
                 margin: EdgeInsets.all(10),
                 padding: EdgeInsets.all(5),
                 decoration: BoxDecoration(
@@ -47,10 +52,9 @@ class CreateView extends GetView<CreateController> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
-                )),
-          ),
-          Expanded(
-            child: Container(
+                ),
+              ),
+              Container(
                 margin: EdgeInsets.all(10),
                 padding: EdgeInsets.all(5),
                 decoration: BoxDecoration(
@@ -65,10 +69,9 @@ class CreateView extends GetView<CreateController> {
                     ),
                   ),
                   maxLines: 3,
-                )),
-          ),
-          Expanded(
-            child: Container(
+                ),
+              ),
+              Container(
                 margin: EdgeInsets.all(10),
                 padding: EdgeInsets.all(5),
                 decoration: BoxDecoration(
@@ -83,20 +86,22 @@ class CreateView extends GetView<CreateController> {
                     ),
                   ),
                   maxLines: 3,
-                )),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  controller.addData(
+                    controller.titleController.text,
+                    controller.estTimeController.text,
+                    controller.ingredientsController.text,
+                    controller.descriptionController.text,
+                  );
+                },
+                child: Text('Buat'),
+              ),
+            ],
           ),
-          ElevatedButton(
-            onPressed: () {
-              controller.addData(
-                controller.titleController.text,
-                controller.estTimeController.text,
-                controller.ingredientsController.text,
-                controller.descriptionController.text,
-              );
-            },
-            child: Text('Buat'),
-          ),
-        ],
+        ),
       ),
     );
   }

@@ -1,23 +1,57 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
+  FirebaseFirestore firestore = FirebaseFirestore.instance;
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  Stream<QuerySnapshot<Object?>> streamData() {
+    CollectionReference data = firestore.collection('posts');
+    return data.orderBy('date', descending: true).snapshots();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  void deleteData(String docID) {
+    try {
+      Get.defaultDialog(
+        title: "Konfirmasi",
+        middleText: "Apakah kamu ingin menghapus resep ini",
+        confirm: ElevatedButton(
+          onPressed: () async {
+            await firestore.collection('posts').doc(docID).delete();
+            Get.back();
+            Get.snackbar("Sukses", "Resep Berhasil dihapus");
+          },
+          child: Text(
+            "Ya",
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
+          style: ElevatedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+        ),
+        cancel: ElevatedButton(
+          onPressed: () {
+            Get.back();
+          },
+          child: Text(
+            "Tidak",
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
+          style: ElevatedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            backgroundColor: Colors.grey,
+          ),
+        ),
+        radius: 10,
+      );
+    } catch (e) {}
   }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }
