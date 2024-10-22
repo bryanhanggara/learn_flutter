@@ -15,7 +15,7 @@ class _HalamanTigaState extends State<HalamanTiga> {
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(Duration(milliseconds: 100), () {
+    Future.delayed(const Duration(milliseconds: 100), () {
       Get.snackbar(
         "Selamat Datang",
         "Anda Berhasil Ke Tahap 3",
@@ -23,7 +23,7 @@ class _HalamanTigaState extends State<HalamanTiga> {
     });
     return Scaffold(
       appBar: AppBar(
-        title: Text("Halaman Tiga"),
+        title: const Text("Halaman Tiga"),
         backgroundColor: Colors.orange,
         leading: IconButton(
           onPressed: () {
@@ -39,7 +39,7 @@ class _HalamanTigaState extends State<HalamanTiga> {
               onCancel: () {},
             );
           },
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
         ),
       ),
       body: Center(
@@ -49,10 +49,10 @@ class _HalamanTigaState extends State<HalamanTiga> {
             Obx(
               () => Text(
                 textController.text.value,
-                style: TextStyle(fontSize: 20),
+                style: const TextStyle(fontSize: 20),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             ElevatedButton(
@@ -65,7 +65,7 @@ class _HalamanTigaState extends State<HalamanTiga> {
                 textController.text.value = "Wow Kamu Sudah Sampai Sini!";
                 textController.toUpper();
               },
-              child: Text(
+              child: const Text(
                 "Tekan Ini",
                 style: TextStyle(color: Colors.white),
               ),
@@ -75,9 +75,9 @@ class _HalamanTigaState extends State<HalamanTiga> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.offAll(HalamamEmpat());
+          Get.offAll(const HalamamEmpat());
         },
-        child: Icon(
+        child: const Icon(
           Icons.arrow_forward,
           color: Colors.white,
         ),

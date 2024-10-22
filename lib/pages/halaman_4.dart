@@ -14,12 +14,12 @@ class _HalamamEmpatState extends State<HalamamEmpat> {
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(Duration(milliseconds: 100), () {
+    Future.delayed(const Duration(milliseconds: 100), () {
       Get.snackbar("Selamat!!", "Anda Sudah Berhasil Sampai Tahap Akhir!");
     });
     return Scaffold(
       appBar: AppBar(
-        title: Text("Halaman Empat"),
+        title: const Text("Halaman Empat"),
         backgroundColor: Colors.orange,
       ),
       body: Center(
@@ -29,33 +29,33 @@ class _HalamamEmpatState extends State<HalamamEmpat> {
             Obx(
               () => Text(
                 textController.text.value,
-                style: TextStyle(fontSize: 20),
+                style: const TextStyle(fontSize: 20),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
               width: 200,
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: TextField(
                 onChanged: (value) {
                   textController.text.value = value;
                 },
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: "Masukkan Text Kapital",
                   border: OutlineInputBorder(),
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             ElevatedButton(
               onPressed: () {
                 textController.toLower();
               },
-              child: Text(
+              child: const Text(
                 "Klik!",
                 style: TextStyle(
                   color: Colors.white,

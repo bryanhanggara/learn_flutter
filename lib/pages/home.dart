@@ -27,37 +27,37 @@ class _HomePageState extends State<HomePage> {
         actions: [
           Container(
             width: 250,
-            padding: EdgeInsets.all(5.0),
-            margin: EdgeInsets.only(right: 10, top: 10),
+            padding: const EdgeInsets.all(5.0),
+            margin: const EdgeInsets.only(right: 10, top: 10),
             child: TextField(
               decoration: InputDecoration(
                 filled: true,
-                fillColor: Color.fromARGB(121, 211, 210, 210),
+                fillColor: const Color.fromARGB(121, 211, 210, 210),
                 hintText: "Cari Resep..",
-                contentPadding: EdgeInsets.symmetric(vertical: 6),
+                contentPadding: const EdgeInsets.symmetric(vertical: 6),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.transparent),
+                  borderSide: const BorderSide(color: Colors.transparent),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.orange),
+                  borderSide: const BorderSide(color: Colors.orange),
                 ),
-                prefixIcon: Icon(Icons.search),
+                prefixIcon: const Icon(Icons.search),
               ),
             ),
           )
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 20,
           vertical: 20,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
@@ -74,7 +74,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             SingleChildScrollView(
@@ -87,11 +87,11 @@ class _HomePageState extends State<HomePage> {
                     height: 35,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Color.fromARGB(255, 255, 72, 0),
+                      color: const Color.fromARGB(255, 255, 72, 0),
                       border: Border.all(
-                          color: Color.fromARGB(255, 255, 72, 0), width: 2),
+                          color: const Color.fromARGB(255, 255, 72, 0), width: 2),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         "Semua",
                         style: TextStyle(
@@ -100,7 +100,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Container(
@@ -110,7 +110,7 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.transparent,
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all(
-                        color: Color.fromARGB(255, 255, 72, 0),
+                        color: const Color.fromARGB(255, 255, 72, 0),
                         width: 2,
                       ),
                     ),
@@ -121,10 +121,10 @@ class _HomePageState extends State<HomePage> {
                           'assets/images/makanan_icon.jpg',
                           width: 25,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 5,
                         ),
-                        Text(
+                        const Text(
                           "Makanan",
                           style: TextStyle(
                             color: Color.fromARGB(255, 255, 72, 0),
@@ -133,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Container(
@@ -143,7 +143,7 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.transparent,
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all(
-                        color: Color.fromARGB(255, 255, 72, 0),
+                        color: const Color.fromARGB(255, 255, 72, 0),
                         width: 2,
                       ),
                     ),
@@ -154,10 +154,10 @@ class _HomePageState extends State<HomePage> {
                           'assets/images/makanan_icon.jpg',
                           width: 25,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 5,
                         ),
-                        Text(
+                        const Text(
                           "Minuman",
                           style:
                               TextStyle(color: Color.fromARGB(255, 255, 72, 0)),
@@ -165,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Container(
@@ -175,7 +175,7 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.transparent,
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all(
-                        color: Color.fromARGB(255, 255, 72, 0),
+                        color: const Color.fromARGB(255, 255, 72, 0),
                         width: 2,
                       ),
                     ),
@@ -186,10 +186,10 @@ class _HomePageState extends State<HomePage> {
                           'assets/images/makanan_icon.jpg',
                           width: 25,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 5,
                         ),
-                        Text(
+                        const Text(
                           "Kue",
                           style: TextStyle(
                             color: Color.fromARGB(255, 255, 72, 0),
@@ -201,12 +201,12 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Expanded(
               child: GridView(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 10,
                   mainAxisSpacing: 10,
@@ -214,13 +214,13 @@ class _HomePageState extends State<HomePage> {
                 ),
                 children: [
                   Container(
-                    constraints: BoxConstraints(minWidth: double.infinity),
+                    constraints: const BoxConstraints(minWidth: double.infinity),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
-                          color: const Color.fromARGB(255, 204, 204, 204),
+                          color: Color.fromARGB(255, 204, 204, 204),
                           spreadRadius: 0.5,
                           blurRadius: 0.8,
                         ),
@@ -230,7 +230,7 @@ class _HomePageState extends State<HomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         ClipRRect(
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(10),
                             topRight: Radius.circular(10),
                           ),
@@ -241,10 +241,10 @@ class _HomePageState extends State<HomePage> {
                             height: 100,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
-                        Padding(
+                        const Padding(
                           padding:
                               EdgeInsets.symmetric(horizontal: 12, vertical: 2),
                           child: Text(
@@ -255,17 +255,17 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 horizontal: 12, vertical: 0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Row(
+                                const Row(
                                   children: [
                                     Icon(
                                       Icons.alarm,
@@ -279,7 +279,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 10,
                                 ),
                                 Expanded(
@@ -287,7 +287,7 @@ class _HomePageState extends State<HomePage> {
                                     height: 30,
                                     child: ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                        padding: EdgeInsets.all(4.0),
+                                        padding: const EdgeInsets.all(4.0),
                                         backgroundColor: Colors.orange,
                                         shape: RoundedRectangleBorder(
                                           borderRadius:
@@ -295,7 +295,7 @@ class _HomePageState extends State<HomePage> {
                                         ),
                                       ),
                                       onPressed: () {},
-                                      child: Text(
+                                      child: const Text(
                                         "Detail",
                                         style: TextStyle(
                                           color: Colors.white,
@@ -312,13 +312,13 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Container(
-                    constraints: BoxConstraints(minWidth: double.infinity),
+                    constraints: const BoxConstraints(minWidth: double.infinity),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
-                          color: const Color.fromARGB(255, 204, 204, 204),
+                          color: Color.fromARGB(255, 204, 204, 204),
                           spreadRadius: 0.5,
                           blurRadius: 0.8,
                         ),
@@ -328,7 +328,7 @@ class _HomePageState extends State<HomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         ClipRRect(
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(10),
                             topRight: Radius.circular(10),
                           ),
@@ -339,10 +339,10 @@ class _HomePageState extends State<HomePage> {
                             height: 100,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
-                        Padding(
+                        const Padding(
                           padding:
                               EdgeInsets.symmetric(horizontal: 12, vertical: 2),
                           child: Text(
@@ -353,17 +353,17 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 horizontal: 12, vertical: 0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Row(
+                                const Row(
                                   children: [
                                     Icon(
                                       Icons.alarm,
@@ -377,7 +377,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 10,
                                 ),
                                 Expanded(
@@ -385,7 +385,7 @@ class _HomePageState extends State<HomePage> {
                                     height: 30,
                                     child: ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                        padding: EdgeInsets.all(4.0),
+                                        padding: const EdgeInsets.all(4.0),
                                         backgroundColor: Colors.orange,
                                         shape: RoundedRectangleBorder(
                                           borderRadius:
@@ -393,7 +393,7 @@ class _HomePageState extends State<HomePage> {
                                         ),
                                       ),
                                       onPressed: () {},
-                                      child: Text(
+                                      child: const Text(
                                         "Detail",
                                         style: TextStyle(
                                           color: Colors.white,
@@ -410,13 +410,13 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Container(
-                    constraints: BoxConstraints(minWidth: double.infinity),
+                    constraints: const BoxConstraints(minWidth: double.infinity),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
-                          color: const Color.fromARGB(255, 204, 204, 204),
+                          color: Color.fromARGB(255, 204, 204, 204),
                           spreadRadius: 0.5,
                           blurRadius: 0.8,
                         ),
@@ -426,7 +426,7 @@ class _HomePageState extends State<HomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         ClipRRect(
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(10),
                             topRight: Radius.circular(10),
                           ),
@@ -437,10 +437,10 @@ class _HomePageState extends State<HomePage> {
                             height: 100,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
-                        Padding(
+                        const Padding(
                           padding:
                               EdgeInsets.symmetric(horizontal: 12, vertical: 2),
                           child: Text(
@@ -451,17 +451,17 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 horizontal: 12, vertical: 0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Row(
+                                const Row(
                                   children: [
                                     Icon(
                                       Icons.alarm,
@@ -475,7 +475,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 10,
                                 ),
                                 Expanded(
@@ -483,7 +483,7 @@ class _HomePageState extends State<HomePage> {
                                     height: 30,
                                     child: ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                        padding: EdgeInsets.all(4.0),
+                                        padding: const EdgeInsets.all(4.0),
                                         backgroundColor: Colors.orange,
                                         shape: RoundedRectangleBorder(
                                           borderRadius:
@@ -491,7 +491,7 @@ class _HomePageState extends State<HomePage> {
                                         ),
                                       ),
                                       onPressed: () {},
-                                      child: Text(
+                                      child: const Text(
                                         "Detail",
                                         style: TextStyle(
                                           color: Colors.white,
@@ -508,13 +508,13 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Container(
-                    constraints: BoxConstraints(minWidth: double.infinity),
+                    constraints: const BoxConstraints(minWidth: double.infinity),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
-                          color: const Color.fromARGB(255, 204, 204, 204),
+                          color: Color.fromARGB(255, 204, 204, 204),
                           spreadRadius: 0.5,
                           blurRadius: 0.8,
                         ),
@@ -524,7 +524,7 @@ class _HomePageState extends State<HomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         ClipRRect(
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(10),
                             topRight: Radius.circular(10),
                           ),
@@ -535,10 +535,10 @@ class _HomePageState extends State<HomePage> {
                             height: 100,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
-                        Padding(
+                        const Padding(
                           padding:
                               EdgeInsets.symmetric(horizontal: 12, vertical: 2),
                           child: Text(
@@ -549,17 +549,17 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 horizontal: 12, vertical: 0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Row(
+                                const Row(
                                   children: [
                                     Icon(
                                       Icons.alarm,
@@ -573,7 +573,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 10,
                                 ),
                                 Expanded(
@@ -581,7 +581,7 @@ class _HomePageState extends State<HomePage> {
                                     height: 30,
                                     child: ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                        padding: EdgeInsets.all(4.0),
+                                        padding: const EdgeInsets.all(4.0),
                                         backgroundColor: Colors.orange,
                                         shape: RoundedRectangleBorder(
                                           borderRadius:
@@ -589,7 +589,7 @@ class _HomePageState extends State<HomePage> {
                                         ),
                                       ),
                                       onPressed: () {},
-                                      child: Text(
+                                      child: const Text(
                                         "Detail",
                                         style: TextStyle(
                                           color: Colors.white,
@@ -606,13 +606,13 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Container(
-                    constraints: BoxConstraints(minWidth: double.infinity),
+                    constraints: const BoxConstraints(minWidth: double.infinity),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
-                          color: const Color.fromARGB(255, 204, 204, 204),
+                          color: Color.fromARGB(255, 204, 204, 204),
                           spreadRadius: 0.5,
                           blurRadius: 0.8,
                         ),
@@ -622,7 +622,7 @@ class _HomePageState extends State<HomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         ClipRRect(
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(10),
                             topRight: Radius.circular(10),
                           ),
@@ -633,10 +633,10 @@ class _HomePageState extends State<HomePage> {
                             height: 100,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
-                        Padding(
+                        const Padding(
                           padding:
                               EdgeInsets.symmetric(horizontal: 12, vertical: 2),
                           child: Text(
@@ -647,17 +647,17 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 horizontal: 12, vertical: 0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Row(
+                                const Row(
                                   children: [
                                     Icon(
                                       Icons.alarm,
@@ -671,7 +671,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 10,
                                 ),
                                 Expanded(
@@ -679,7 +679,7 @@ class _HomePageState extends State<HomePage> {
                                     height: 30,
                                     child: ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                        padding: EdgeInsets.all(4.0),
+                                        padding: const EdgeInsets.all(4.0),
                                         backgroundColor: Colors.orange,
                                         shape: RoundedRectangleBorder(
                                           borderRadius:
@@ -687,7 +687,7 @@ class _HomePageState extends State<HomePage> {
                                         ),
                                       ),
                                       onPressed: () {},
-                                      child: Text(
+                                      child: const Text(
                                         "Detail",
                                         style: TextStyle(
                                           color: Colors.white,
@@ -711,11 +711,11 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
+        backgroundColor: const Color.fromARGB(255, 255, 72, 0),
         child: Icon(
           Icons.add,
           color: Colors.white,
         ),
-        backgroundColor: Color.fromARGB(255, 255, 72, 0),
       ),
     );
   }

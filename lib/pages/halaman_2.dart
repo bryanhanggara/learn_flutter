@@ -18,7 +18,7 @@ class _HalamanDuaState extends State<HalamanDua> {
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(Duration(milliseconds: 100), () {
+    Future.delayed(const Duration(milliseconds: 100), () {
       Get.snackbar(
         "Selamat Datang",
         "Anda Berhasil Ke Tahap 2",
@@ -42,7 +42,7 @@ class _HalamanDuaState extends State<HalamanDua> {
               onCancel: () {},
             );
           },
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
         ),
       ),
       body: Center(
@@ -68,12 +68,12 @@ class _HalamanDuaState extends State<HalamanDua> {
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
-              child: Text(
+              child: const Text(
                 'Kembali',
                 style: TextStyle(color: Colors.white),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             ElevatedButton(
@@ -83,8 +83,8 @@ class _HalamanDuaState extends State<HalamanDua> {
                   child: Wrap(
                     children: [
                       ListTile(
-                        leading: Icon(Icons.light_mode_outlined),
-                        title: Text("Light Mode"),
+                        leading: const Icon(Icons.light_mode_outlined),
+                        title: const Text("Light Mode"),
                         onTap: () {
                           Get.changeTheme(
                             ThemeData(
@@ -102,7 +102,7 @@ class _HalamanDuaState extends State<HalamanDua> {
                                 ),
                               ),
                               floatingActionButtonTheme:
-                                  FloatingActionButtonThemeData(
+                                  const FloatingActionButtonThemeData(
                                 backgroundColor: Colors.orange,
                               ),
                             ),
@@ -111,8 +111,8 @@ class _HalamanDuaState extends State<HalamanDua> {
                         },
                       ),
                       ListTile(
-                        leading: Icon(Icons.dark_mode),
-                        title: Text("Dark Mode"),
+                        leading: const Icon(Icons.dark_mode),
+                        title: const Text("Dark Mode"),
                         onTap: () {
                           Get.changeTheme(
                             ThemeData(
@@ -130,7 +130,7 @@ class _HalamanDuaState extends State<HalamanDua> {
                                 ),
                               ),
                               floatingActionButtonTheme:
-                                  FloatingActionButtonThemeData(
+                                  const FloatingActionButtonThemeData(
                                 backgroundColor: Colors.blueGrey,
                               ),
                             ),
@@ -147,7 +147,7 @@ class _HalamanDuaState extends State<HalamanDua> {
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
-              child: Text(
+              child: const Text(
                 "Show Notification",
                 style: TextStyle(color: Colors.white),
               ),
@@ -158,9 +158,9 @@ class _HalamanDuaState extends State<HalamanDua> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
-          page_2.value = await Get.to(HalamanTiga(), arguments: "");
+          page_2.value = await Get.to(const HalamanTiga(), arguments: "");
         },
-        child: Icon(
+        child: const Icon(
           Icons.arrow_forward,
           color: Colors.white,
         ),

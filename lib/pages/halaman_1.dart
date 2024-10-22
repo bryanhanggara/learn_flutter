@@ -2,10 +2,7 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:myapp/components/navigation.dart';
 import 'package:myapp/pages/halaman_2.dart';
-import 'package:myapp/pages/halaman_3.dart';
-import 'package:myapp/pages/halaman_4.dart';
 
 class HalamanSatu extends StatelessWidget {
   const HalamanSatu({super.key});
@@ -16,7 +13,7 @@ class HalamanSatu extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text("Halaman Satu"),
+          title: const Text("Halaman Satu"),
           backgroundColor: Colors.orange,
         ),
         body: Center(
@@ -25,7 +22,7 @@ class HalamanSatu extends StatelessWidget {
             children: [
               ElevatedButton(
                 onPressed: () async {
-                  page_1.value = await Get.to(HalamanDua(),
+                  page_1.value = await Get.to(const HalamanDua(),
                       arguments: "Selaamat Andaa Masuk ke Tahap Dua!");
                 },
                 style: ElevatedButton.styleFrom(
@@ -33,7 +30,7 @@ class HalamanSatu extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
-                child: Text(
+                child: const Text(
                   "Mulai Petualangan Seru",
                   style: TextStyle(color: Colors.white),
                 ),

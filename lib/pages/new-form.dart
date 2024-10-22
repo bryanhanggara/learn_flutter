@@ -16,11 +16,11 @@ class _FormNewState extends State<FormNew> {
       body: Stack(
         children: [
           Padding(
-            padding: EdgeInsets.all(50.0),
+            padding: const EdgeInsets.all(50.0),
             child: ListView(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(left: 5),
+                  padding: const EdgeInsets.only(left: 5),
                   child: Text(
                     "Email",
                     style: GoogleFonts.poppins(
@@ -29,7 +29,7 @@ class _FormNewState extends State<FormNew> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 TextField(
@@ -40,11 +40,11 @@ class _FormNewState extends State<FormNew> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 5),
+                  padding: const EdgeInsets.only(left: 5),
                   child: Text(
                     "Username",
                     style: GoogleFonts.poppins(
@@ -53,7 +53,7 @@ class _FormNewState extends State<FormNew> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 TextField(
@@ -64,11 +64,11 @@ class _FormNewState extends State<FormNew> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 5),
+                  padding: const EdgeInsets.only(left: 5),
                   child: Text(
                     "Password",
                     style: GoogleFonts.poppins(
@@ -77,7 +77,7 @@ class _FormNewState extends State<FormNew> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 TextField(
@@ -89,26 +89,26 @@ class _FormNewState extends State<FormNew> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 ElevatedButton(
                   onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.orange,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10))),
                   child: Text(
                     "Sign Up",
                     style: TextStyle(
                       color: Colors.white,
                     ),
                   ),
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.orange,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10))),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Row(
                   children: [
-                    Expanded(
+                    const Expanded(
                       child: Divider(
                         thickness: 1,
                         color: Colors.grey,
@@ -123,7 +123,7 @@ class _FormNewState extends State<FormNew> {
                         ),
                       ),
                     ),
-                    Expanded(
+                    const Expanded(
                       child: Divider(
                         thickness: 1,
                         color: Colors.grey,
