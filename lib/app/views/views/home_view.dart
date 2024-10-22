@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/main.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -89,7 +92,8 @@ class _HomePageState extends State<HomePage> {
                       borderRadius: BorderRadius.circular(10),
                       color: const Color.fromARGB(255, 255, 72, 0),
                       border: Border.all(
-                          color: const Color.fromARGB(255, 255, 72, 0), width: 2),
+                          color: const Color.fromARGB(255, 255, 72, 0),
+                          width: 2),
                     ),
                     child: const Center(
                       child: Text(
@@ -214,7 +218,8 @@ class _HomePageState extends State<HomePage> {
                 ),
                 children: [
                   Container(
-                    constraints: const BoxConstraints(minWidth: double.infinity),
+                    constraints:
+                        const BoxConstraints(minWidth: double.infinity),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
@@ -312,7 +317,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Container(
-                    constraints: const BoxConstraints(minWidth: double.infinity),
+                    constraints:
+                        const BoxConstraints(minWidth: double.infinity),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
@@ -410,7 +416,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Container(
-                    constraints: const BoxConstraints(minWidth: double.infinity),
+                    constraints:
+                        const BoxConstraints(minWidth: double.infinity),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
@@ -508,7 +515,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Container(
-                    constraints: const BoxConstraints(minWidth: double.infinity),
+                    constraints:
+                        const BoxConstraints(minWidth: double.infinity),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
@@ -606,7 +614,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Container(
-                    constraints: const BoxConstraints(minWidth: double.infinity),
+                    constraints:
+                        const BoxConstraints(minWidth: double.infinity),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
@@ -710,7 +719,9 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Get.toNamed('/create-receipt');
+        },
         backgroundColor: const Color.fromARGB(255, 255, 72, 0),
         child: Icon(
           Icons.add,

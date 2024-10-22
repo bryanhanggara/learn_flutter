@@ -1,12 +1,16 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:myapp/pages/form.dart';
-import 'package:myapp/pages/halaman_1.dart';
-import 'package:myapp/pages/home.dart';
-import 'package:myapp/pages/new-form.dart';
+import 'package:myapp/app/routes/app_route.dart';
+import 'package:myapp/app/views/views/home_view.dart';
+import 'package:myapp/firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(MyApp());
 }
 
@@ -37,7 +41,8 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.orange,
         ),
       ),
-      home: const HalamanSatu(),
+      initialRoute: AppRoute.home,
+      getPages: AppRoute.routes,
     );
   }
 }
